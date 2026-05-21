@@ -335,6 +335,19 @@
     }
     .badge-icon { font-size: 16px; }
 
+    /* ── ROI TABLE ── */
+    #roi { padding: 80px 0; border-top: 1px solid var(--border); }
+    .roi-intro { text-align: center; margin-bottom: 40px; }
+    .roi-intro h2 { font-size: clamp(24px,4vw,36px); font-weight: 800; margin-bottom: 12px; }
+    .roi-intro p { color: var(--muted); font-size: 16px; max-width: 560px; margin: 0 auto; }
+    .roi-table { width: 100%; border-collapse: collapse; max-width: 640px; margin: 0 auto 32px; }
+    .roi-table th { font-size: 11px; text-transform: uppercase; letter-spacing: .08em; color: var(--dim); padding: 8px 12px; text-align: left; border-bottom: 1px solid var(--border); }
+    .roi-table td { padding: 12px 12px; font-size: 15px; border-bottom: 1px solid var(--border); color: var(--muted); }
+    .roi-table tr.highlight td { color: var(--text); font-weight: 700; }
+    .roi-table tr.highlight td:first-child::after { content: ' ✓'; color: var(--accent); }
+    .roi-table .accent { color: var(--accent); font-weight: 700; }
+    .roi-note { text-align: center; font-size: 13px; color: var(--dim); max-width: 560px; margin: 0 auto; }
+
     /* ── CTA ── */
     #cta {
       text-align: center;
@@ -402,7 +415,7 @@
     <h1>Верни спящих клиентов.<br/><em>Без рекламных бюджетов.</em></h1>
     <p class="hero-sub">
       Загружаешь базу — AI находит тех, кто давно не приходил,
-      пишет персональную серию из 4 писем и запускает кампанию за 5 минут.
+      пишет персональную серию из 4 писем и запускает кампанию за 10–15 минут.
     </p>
     <div class="hero-actions">
       <a href="http://23.88.109.33" class="btn-primary">Запустить бесплатно →</a>
@@ -604,7 +617,7 @@
           <div>
             <h3 style="font-size:16px;font-weight:700;margin-bottom:8px">«Вы украдёте мою базу клиентов»</h3>
             <p style="color:var(--muted);font-size:14px;line-height:1.7;margin:0">
-              Файл открывается в вашем браузере — он <strong style="color:var(--text)">физически не передаётся</strong> на наши серверы. Мы получаем только счётчики: сколько email, телефонов, спящих клиентов — без имён и контактов. Это как дать бухгалтеру не папку с документами, а только цифру итога. Украсть нечего.
+              Файл открывается в вашем браузере — он <strong style="color:var(--text)">физически не передаётся</strong> на наши серверы. Мы получаем только агрегированные счётчики: сколько email-адресов, телефонов, спящих клиентов — без имён, контактов и заголовков столбцов. Это как дать бухгалтеру не папку с документами, а только цифру итога. Украсть нечего — мы технически не можем этого сделать.
             </p>
           </div>
         </div>
@@ -617,7 +630,7 @@
           <div>
             <h3 style="font-size:16px;font-weight:700;margin-bottom:8px">«Это нарушает ФЗ-152 / GDPR»</h3>
             <p style="color:var(--muted);font-size:14px;line-height:1.7;margin:0">
-              По ФЗ-152 (Россия) и GDPR (Евросоюз) <strong style="color:var(--text)">оператором персональных данных остаётесь вы</strong> — именно вы собрали базу и работаете с ней. ReviveBase не является оператором и не обрабатывает персональные данные, потому что не получает их. Вы пишете своим клиентам сами — как если бы взяли телефон и позвонили.
+              По ФЗ-152 (Россия) и GDPR (Евросоюз) <strong style="color:var(--text)">оператором персональных данных остаётесь вы</strong> — именно вы собрали базу и работаете с ней. На этапе аудита ReviveBase не получает персональные данные вообще — только счётчики. На этапе отправки писем мы действуем как технический посредник (processor по GDPR ст.28): письма доставляет Resend (SOC 2 Type II, GDPR-compliant). Контролёром данных остаётесь вы — как если бы наняли курьерскую службу для доставки своих писем.
             </p>
           </div>
         </div>
@@ -757,6 +770,69 @@
   </div>
 </section>
 
+<!-- ROI TABLE -->
+<section id="roi">
+  <div class="container">
+    <div class="roi-intro">
+      <div class="section-tag">Когда это выгодно</div>
+      <h2>С какой базой ReviveBase окупается</h2>
+      <p>Расчёт при среднем чеке $50 и win-back конверсии 3–10% по данным индустрии. Скидка 20% — ваш оффер клиентам.</p>
+    </div>
+    <table class="roi-table">
+      <thead>
+        <tr>
+          <th>База</th>
+          <th>Спящих ~37%</th>
+          <th>Вернётся 3%</th>
+          <th>Вернётся 10%</th>
+          <th>Выручка</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>100 клиентов</td>
+          <td>37</td>
+          <td>1</td>
+          <td>4</td>
+          <td>$50 – $185</td>
+        </tr>
+        <tr>
+          <td>200 клиентов</td>
+          <td>74</td>
+          <td>2</td>
+          <td>7</td>
+          <td>$111 – $370</td>
+        </tr>
+        <tr class="highlight">
+          <td>300 клиентов</td>
+          <td>111</td>
+          <td>3</td>
+          <td>11</td>
+          <td class="accent">$167 – $556</td>
+        </tr>
+        <tr>
+          <td>500 клиентов</td>
+          <td>185</td>
+          <td>6</td>
+          <td>19</td>
+          <td>$278 – $925</td>
+        </tr>
+        <tr>
+          <td>1 000 клиентов</td>
+          <td>370</td>
+          <td>11</td>
+          <td>37</td>
+          <td>$555 – $1 850</td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="roi-note">
+      При среднем чеке выше $50 (рестораны, стоматология, фитнес — обычно $80–200) точка безубыточности ещё ниже.
+      Подписка Starter — $29/мес. Первый вернувшийся клиент окупает сервис.
+    </p>
+  </div>
+</section>
+
 <!-- CTA -->
 <section id="cta">
   <div class="container">
@@ -765,14 +841,14 @@
       <h2>Сколько спящих клиентов<br/>у тебя в базе?</h2>
       <p>Загрузи Excel или CSV — аудит займёт 30 секунд.<br/>Первая кампания — бесплатно.</p>
       <a href="http://23.88.109.33" class="btn-primary">Загрузить базу и получить аудит →</a>
-      <div class="cta-note">Без регистрации · Данные остаются у вас · 5 минут до первой кампании</div>
+      <div class="cta-note">Без регистрации · Данные остаются у вас · 10 минут до первой кампании</div>
     </div>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <p>© 2025 ReviveBase · AI-реактивация клиентов для малого бизнеса</p>
+  <p>© 2026 ReviveBase · AI-реактивация клиентов для малого бизнеса</p>
 </footer>
 
 </body>

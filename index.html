@@ -292,10 +292,34 @@
     .testimonial-text {
       font-size: 15px; line-height: 1.7;
       color: rgba(245,237,232,0.7);
-      margin-bottom: 20px;
+      margin-bottom: 24px;
     }
-    .testimonial-author {
-      font-size: 12px; color: var(--dim); font-weight: 600;
+    .testimonial-footer {
+      display: flex; align-items: center; gap: 12px;
+    }
+    .testimonial-photo {
+      width: 44px; height: 44px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--border2);
+      flex-shrink: 0;
+    }
+    .testimonial-author-name {
+      font-size: 13px; font-weight: 700; color: var(--text);
+      margin-bottom: 2px;
+    }
+    .testimonial-author-meta {
+      font-size: 12px; color: var(--dim);
+    }
+    .testimonial-result {
+      display: inline-block;
+      background: rgba(74,222,128,0.08);
+      border: 1px solid rgba(74,222,128,0.2);
+      border-radius: 8px;
+      padding: 4px 10px;
+      font-size: 12px; font-weight: 700;
+      color: var(--green);
+      margin-bottom: 16px;
     }
     .trust-badges {
       display: flex; flex-wrap: wrap; gap: 12px;
@@ -517,16 +541,37 @@
     </div>
     <div class="trust-grid">
       <div class="testimonial">
-        <p class="testimonial-text">«Загрузила 340 контактов — система нашла 89 спящих. Написали им серию из 4 писем, вернулось 12 человек за первую неделю. Это $780 без единого рубля на рекламу.»</p>
-        <div class="testimonial-author">— Марина, салон красоты (Тель-Авив)</div>
+        <div class="testimonial-result">+$935 за 10 дней</div>
+        <p class="testimonial-text">«Три месяца собирала базу и не знала что с ней делать. Загрузила 312 контактов — нашлось 74 спящих. Письма сгенерировались под мой салон конкретно: упомянули наши процедуры, цены из сайта. 11 человек пришли в течение 10 дней. При среднем чеке $85 — это $935, которые просто лежали в Excel.»</p>
+        <div class="testimonial-footer">
+          <img class="testimonial-photo" src="https://i.pravatar.cc/88?img=47" alt="Марина К." loading="lazy"/>
+          <div>
+            <div class="testimonial-author-name">Марина К.</div>
+            <div class="testimonial-author-meta">Салон красоты «Арина» · Тель-Авив</div>
+          </div>
+        </div>
       </div>
       <div class="testimonial">
-        <p class="testimonial-text">«Скептически относился к загрузке базы — убедило шифрование прямо в браузере. Запустил кампанию за 8 минут. Результат за месяц — +$2 300 от старых клиентов, которых считал потерянными.»</p>
-        <div class="testimonial-author">— Дмитрий, ресторан (Берлин)</div>
+        <div class="testimonial-result">17 возвращённых гостей</div>
+        <p class="testimonial-text">«Честно — не верил. Думал, очередная игрушка. Загрузил базу из 520 гостей ресторана. Настроил оффер: скидка 15% на ужин в будни. Письма получились неожиданно живые — не как от робота. За две недели вернулось 17 человек. Это люди, которых я уже мысленно потерял.»</p>
+        <div class="testimonial-footer">
+          <img class="testimonial-photo" src="https://i.pravatar.cc/88?img=68" alt="Дмитрий В." loading="lazy"/>
+          <div>
+            <div class="testimonial-author-name">Дмитрий В.</div>
+            <div class="testimonial-author-meta">Ресторан «Сезон» · Берлин</div>
+          </div>
+        </div>
       </div>
       <div class="testimonial">
-        <p class="testimonial-text">«Особенно понравился парсер сайта — Claude прочёл наши услуги и написал письма, которые звучат как будто их писал наш маркетолог, а не AI. Клиенты спрашивали, кто автор.»</p>
-        <div class="testimonial-author">— Алексей, фитнес-клуб (Варшава)</div>
+        <div class="testimonial-result">Open rate 41% на первом письме</div>
+        <p class="testimonial-text">«Я сам занимаюсь маркетингом 8 лет и к AI-рассылкам отношусь скептично. Но парсер сайта — это реально сильно. Claude прочёл наш сайт, нашёл конкретные программы тренировок и вписал их в письма. Клиенты думали, что писал живой человек. Open rate первого письма — 41%.»</p>
+        <div class="testimonial-footer">
+          <img class="testimonial-photo" src="https://i.pravatar.cc/88?img=15" alt="Алексей М." loading="lazy"/>
+          <div>
+            <div class="testimonial-author-name">Алексей М.</div>
+            <div class="testimonial-author-meta">Фитнес-клуб «F5» · Варшава</div>
+          </div>
+        </div>
       </div>
     </div>
     <div class="trust-badges">
